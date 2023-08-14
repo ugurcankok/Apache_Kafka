@@ -5,6 +5,8 @@ def json_serializer(data):
     return json.dumps(data).encode("utf-8")
 
 # if you have two partitions, you will use P0
+# One consumer can consume from more than one partition
+# same partition cant be assigned to multiple consumer in same group
 '''def get_partition(key, all, available):
     return 0
 
